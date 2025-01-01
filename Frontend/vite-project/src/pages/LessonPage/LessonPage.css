@@ -1,0 +1,89 @@
+.LessonPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligns the content */
+    min-height: 100vh; /* Ensure it takes full height */
+    background-color: #f9f9f9; /* Optional: background color for better contrast */
+}
+
+.title-section,
+.video-section,
+.next-lesson-section {
+    text-align: center; /* Center aligns text */
+    width: 90%; /* Set the width to 90% of the screen */
+    max-width: 1200px; /* Optional: increased maximum width for content */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: white; /* Optional: background color for the content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    border-radius: 8px; /* Optional: rounded corners */
+    margin: 10px 0; /* Add margin for spacing between sections */
+}
+
+.title-section h1,
+.title-section h2,
+.title-section p {
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.video-section iframe {
+    margin-top: 20px; /* Add some space above the video */
+    width: 100%; /* Make the iframe responsive and fill the width of the section */
+    height: 600px; /* Increased height for the video */
+}
+
+.next-lesson-section {
+    display: flex; /* Use flexbox to align buttons in a row */
+    justify-content: center; /* Center the buttons */
+    gap: 20px; /* Add spacing between buttons */
+    margin-top: 20px; /* Add space above the buttons */
+    background-color: #f9f9f9; /* Match the parent background color */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: none; /* Ensure no shadow is applied */
+    border: none; /* Ensure no border is visible */
+}
+
+.next-lesson-section button {
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    border: 2px solid #ccc; /* Add a border for visibility */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer */
+    background-color: white; /* Default button color */
+    color: #0f766e; /* Default text color */
+    font-size: 16px; /* Increase font size for better readability */
+    transition: background-color 0.3s, border-color 0.3s; /* Add transition for hover effect */
+}
+
+.next-lesson-section button:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    border-color: #0f766e; /* Change border color on hover */
+}
+
+.next-lesson-section button.mark-complete {
+    background-color: #0f766e; /* Button color for "Mark complete" */
+    color: white; /* Text color for "Mark complete" */
+}
+
+.next-lesson-section button.next-lesson {
+    background-color: #f1f1f1; /* Grey background if no next lesson */
+    color: #ccc; /* Light text color */
+    cursor: not-allowed; /* Change cursor to indicate it's unclickable */
+}
+
+.next-lesson-section button.mark-complete.completed {
+    background-color: #4caf50; /* Green color to indicate completion */
+    cursor: not-allowed;
+    border-color: #4caf50;
+}
+
+.next-lesson-section button.disabled {
+    background-color: #d3d3d3; /* Grey background for disabled button */
+    color: #8c8c8c; /* Light grey text color */
+    cursor: not-allowed; /* Indicate button is unclickable */
+    border-color: #d3d3d3; /* Match border to background */
+}
+
+.next-lesson-section button.disabled:hover {
+    background-color: #d3d3d3; /* Ensure no color change on hover */
+    color: #8c8c8c; /* Ensure no text color change */
+}

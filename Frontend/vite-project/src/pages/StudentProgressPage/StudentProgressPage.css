@@ -1,0 +1,147 @@
+.StudentProgressPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+
+.assignments-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.assignment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.assignment-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.assignment-name {
+    flex: 1;
+    font-size: 16px;
+}
+
+.grade-button {
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grade-button:hover {
+    background-color: #e0a800;
+}
+
+.completed {
+    background-color: #4caf50;
+}
+
+.uncompleted {
+    background-color: #f8d7da;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.view-url-button {
+    align-self: flex-start;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-url-button:hover {
+    background-color: #0056b3;
+}
+
+.confirm-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-button:hover {
+    background-color: #218838;
+}
+
+.close-modal-button {
+    background-color: #c55124;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-modal-button:hover {
+    background-color: #b1481f;
+}
+
+.modal-content label {
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Make it bold */
+    color: #333; /* Darker color for better visibility */
+    margin-bottom: 5px; /* Add spacing below the label */
+}
+
+.modal-content h4 {
+    font-size: 16px; /* Larger font size */
+    color: #333; /* Darker color for better visibility */
+}
+
+.modal h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}

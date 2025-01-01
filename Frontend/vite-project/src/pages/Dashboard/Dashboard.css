@@ -1,0 +1,255 @@
+.Dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-section {
+    margin-top: 60px;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #0f766e;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #0d5e58;
+}
+
+.courses-container {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.courses-section {
+    border: 1px solid #0f766e;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.course-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #0f766e;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    width: 200px;
+    height: 200px; /* Ensures the item remains square */
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+}
+
+.course-image {
+    width: 100%;
+    height: 50%; /* Image takes up half the height */
+    object-fit: cover;
+    border-radius: 4px 4px 0 0; /* Optional: rounded corners */
+}
+
+.course-title {
+    font-size: 0.9em; /* Reduced font size for title */
+    margin: 5px 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 180px; /* Apply ellipsis earlier */
+}
+
+.price {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #FFA500;
+    text-align: center;
+    margin: 2px 2px;
+}
+
+.progress {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #4caf50;
+    text-align: center;
+    margin: 2px 2px;
+}
+
+.instructor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.instructor-avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.instructor-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.modal p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.modal-instructor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-instructor img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.join-button, .close-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.join-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.close-button {
+    background-color: #dc3545;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Payment Modal for QR Code */
+.payment-qr-code {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payment-qr-code img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.payment-qr-code p {
+    font-size: 1.2em;
+    color: #0f766e;
+    margin-top: 10px;
+}
+
+.modal-overlay .modal {
+    width: 70%;
+    max-width: 500px;
+}
+
+.payment-modal h2 {
+    font-size: 1.5em;
+    color: #0f766e;
+}
+
+.payment-modal p {
+    font-size: 1em;
+    color: #333;
+}
+
+.close-payment-button {
+    background-color: #0f766e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-course-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0f766e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
