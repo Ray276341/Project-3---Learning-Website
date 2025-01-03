@@ -5,7 +5,7 @@ user = {
     email: String,
     phone: String,
     password: String,
-    role: String, // user/instructor/admin
+    role: String, // user/instructor
     avatar: String, // link to image
     create_at: Date,
     update_at: Date
@@ -143,12 +143,6 @@ answer = {
     }
 };
 
-// enrollment = {
-//     _id: ObjectId,
-//     user: ObjectId,
-//     course: ObjectId,
-//     create_at: Date,
-// }
 
 submission = {
     _id: ObjectId,

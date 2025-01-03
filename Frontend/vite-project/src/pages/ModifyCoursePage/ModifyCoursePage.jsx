@@ -182,6 +182,7 @@ const ModifyCoursePage = () => {
                 }));
                 setNewChapterTitle('');
                 setIsAddingChapter(false);
+                window.location.reload(); // Reload the page after success
             } else {
                 setError(data.message);
             }

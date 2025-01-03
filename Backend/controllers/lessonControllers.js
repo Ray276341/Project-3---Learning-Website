@@ -52,7 +52,7 @@ exports.addLesson = [
 
                 const fileContent = fs.readFileSync(req.file.path);
                 const params = {
-                    Bucket: 'learningwebsite-1',
+                    Bucket: 'learningwebsite-2',
                     Key: filename,
                     Body: fileContent,
                     ContentType: req.file.mimetype

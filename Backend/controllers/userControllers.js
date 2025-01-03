@@ -157,11 +157,11 @@ exports.updateUserInfo = [
             }
 
             if (req.file) {
-                const defaultAvatarUrl = 'https://learningwebsite-1.s3.ap-southeast-1.amazonaws.com/user-avatar/default-user-avatar.png';
+                const defaultAvatarUrl = 'https://learningwebsite-2.s3.ap-southeast-2.amazonaws.com/user-avatar/default-user-avatar.png';
                 if (user.avatar && user.avatar !== defaultAvatarUrl && user.avatar.includes('amazonaws.com')) {
                     const oldKey = user.avatar.split('/').slice(-2).join('/');
                     const deleteParams = {
-                        Bucket: 'learningwebsite-1',
+                        Bucket: 'learningwebsite-2',
                         Key: oldKey
                     };
                     const deleteCommand = new DeleteObjectCommand(deleteParams);
@@ -174,7 +174,7 @@ exports.updateUserInfo = [
 
                 const fileContent = fs.readFileSync(req.file.path);
                 const params = {
-                    Bucket: 'learningwebsite-1',
+                    Bucket: 'learningwebsite-2',
                     Key: filename,
                     Body: fileContent,
                     ContentType: req.file.mimetype

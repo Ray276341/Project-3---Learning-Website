@@ -34,6 +34,10 @@ const StudentProgressPage = () => {
                                     `http://localhost:3000/assignment/get-assignment/${submission.assignmentId}`,
                                     { headers: { 'Auth-Token': token } }
                                 );
+                                const validTypes = ['plaintext', 'quiz', 'file-upload'];
+                                if (!validTypes.includes(assignmentData.data.type)) {
+                                    return null; // Skip this assignment if the type is not valid
+                                }
                                 return {
                                     id: submission.assignmentId,
                                     title: assignmentData.data.title,

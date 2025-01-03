@@ -161,8 +161,8 @@ exports.addCourse = [
 
             await course.save();
 
-            const region = 'ap-southeast-1';
-            const bucketName = 'learningwebsite-1';
+            const region = 'ap-southeast-2';
+            const bucketName = 'learningwebsite-2';
             let imageUrl = `https://${bucketName}.s3.${region}.amazonaws.com/course-image/default-course-image.png`;
 
             if (req.file) {
@@ -219,7 +219,7 @@ exports.updateCourse = [
                 if (course.image && course.image.includes('course-image/')) {
                     const oldKey = course.image.split('/').slice(-2).join('/');
                     const deleteParams = {
-                        Bucket: 'learningwebsite-1',
+                        Bucket: 'learningwebsite-2',
                         Key: oldKey
                     };
                     const deleteCommand = new DeleteObjectCommand(deleteParams);
@@ -232,7 +232,7 @@ exports.updateCourse = [
 
                 const fileContent = fs.readFileSync(req.file.path);
                 const params = {
-                    Bucket: 'learningwebsite-1',
+                    Bucket: 'learningwebsite-2',
                     Key: filename,
                     Body: fileContent,
                     ContentType: req.file.mimetype

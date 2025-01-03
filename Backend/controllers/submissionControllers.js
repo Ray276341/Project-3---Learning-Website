@@ -168,7 +168,7 @@ exports.addSubmission = async (req, res) => {
             } else if (assignment.type === 'file-upload') {
                 const file = req.files['file'][0];
                 const fileContent = fs.readFileSync(file.path);
-                const bucketName = 'learningwebsite-1';
+                const bucketName = 'learningwebsite-2';
                 const folderName = `submission-upload/${id}`;
 
                 const params = {
